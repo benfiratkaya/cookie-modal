@@ -1,0 +1,72 @@
+/*
+
+Project Name: Cookie Modal
+Version: 1.0.0
+Project Page: https://github.com/benfiratkaya/Cookie-Modal
+License: https://github.com/benfiratkaya/Cookie-Modal/blob/master/LICENSE
+Author: Firat Kaya
+Author URI: https://www.benfiratkaya.com
+
+---
+
+Copyright 2020 Firat Kaya
+
+*/
+
+// Variables
+$modal-zindex: 1050;
+$modal-inner-padding: 1.5rem;
+$modal-max-width: 500px;
+$modal-content-text-color: #ffffff;
+$modal-content-background-color: rgb(10, 8, 31);
+$modal-content-border-radius: 0.7rem;
+
+// SCSS
+.cookie-modal {
+  position: fixed;
+  left: 1.5rem !important;
+  right: 1.5rem !important;
+  bottom: 1.5rem !important;
+  z-index: $modal-zindex;
+}
+
+.cookie-modal-dialog {
+  position: relative;
+  width: auto;
+
+  .cookie-modal.fade & {
+    transform: translate(0px, -50px);
+    transition: transform 0.3s ease-out 0s;
+  }
+
+  .cookie-modal.show & {
+    transform: none;
+  }
+
+  .cookie-modal.cookie-modal-static & {
+    transform: scale(1.02);
+  }
+}
+
+.cookie-modal-content {
+  color: $modal-content-text-color !important;
+  background-color: $modal-content-background-color !important;
+  padding: $modal-inner-padding;
+  border-radius: $modal-content-border-radius;
+  box-shadow: rgba(31, 45, 61, 0.3) 0px 0.25rem 0.5rem;
+}
+
+// Scale up the modal
+@media (min-width: 576px) {
+  .cookie-modal {
+    right: auto !important;
+  }
+
+  .cookie-modal-dialog {
+    max-width: $modal-max-width;
+  }
+
+  .cookie-modal-content {
+    box-shadow: rgba(31, 45, 61, 0.3) 0px 0.5rem 1rem;
+  }
+}
