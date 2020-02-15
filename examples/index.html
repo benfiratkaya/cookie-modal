@@ -15,12 +15,17 @@
 </head>
 
 <body>
+  <!-- Demo -->
   <main>
     <div class="container mt-5">
       <h3>Lorem ipsum</h3>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, facere enim saepe praesentium dignissimos ratione, necessitatibus magni ea nihil aliquid reiciendis nesciunt non eos quidem, itaque est quia exercitationem vero.</p>
+      <div class="mt-3">
+        <button id="clearData" class="btn btn-outline-danger">Clear site data</button>
+      </div>
     </div>
   </main>
+  <!-- </Demo> -->
 
   <!-- Cookie-Modal -->
   <div class="cookie-modal fade" data-toggle="cookie-modal">
@@ -44,6 +49,12 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
   <!-- Cookie Modal JS -->
   <script src="assets/js/cookie-modal.min.js"></script>
+
+  <script>
+    $("#clearData").on("click", function() {
+      localStorage.clear();
+    });
+  </script>
 </body>
 
 </html>
