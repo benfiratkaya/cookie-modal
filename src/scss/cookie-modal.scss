@@ -23,6 +23,7 @@ $modal-content-border-radius: 0.7rem;
 
 // SCSS
 .cookie-modal {
+  display: none;
   position: fixed;
   left: 1.5rem !important;
   right: 1.5rem !important;
