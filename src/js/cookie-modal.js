@@ -20,6 +20,8 @@ var CookieModal = (function() {
     if (!cookie) {
       $this.show();
       $this.addClass("show");
+    } else {
+      $this.hide();
     }
   }
 
